@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demomacros.MainController">
+    <children>
+        <!-- Previous Date Button -->
+        <Button fx:id="prevDate" layoutX="74.0" layoutY="14.0" mnemonicParsing="false" text="&lt;">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+
+        <!-- Label to display the selected date -->
+        <Label fx:id="dateLabel" layoutX="120.0" layoutY="15.0" onMouseClicked="#showDatePicker" prefHeight="38.0" prefWidth="104.0" style="-fx-padding: 5px; -fx-border-color: lightgray; -fx-background-color: white; -fx-alignment: center;" text="2024-08-12" />
+
+        <!-- DatePicker (initially hidden) -->
+        <DatePicker fx:id="datePicker" layoutX="120.0" layoutY="14.0" prefHeight="25.0" prefWidth="104.0" visible="false" />
+
+        <!-- Next Date Button -->
+        <Button fx:id="nextDate" layoutX="233.0" layoutY="14.0" mnemonicParsing="false" text="&gt;">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+      <Button layoutX="300.0" layoutY="14.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="25.0" prefWidth="26.0" text="+" />
+      <Pane layoutX="13.0" layoutY="81.0" prefHeight="405.0" prefWidth="319.0">
+         <children>
+            <Label layoutX="108.0" layoutY="14.0" text="Calories Consumed" />
+            <Label layoutX="78.0" layoutY="72.0" text="Daily Nutrients Consumption">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="110.0" prefHeight="17.0" prefWidth="27.0" text="Fat:" />
+            <Label layoutX="31.0" layoutY="147.0" text="Carb:" />
+            <Label layoutX="32.0" layoutY="186.0" text="Protein:" />
+            <Label fx:id="lblFats" layoutX="82.0" layoutY="110.0" prefHeight="17.0" prefWidth="104.0" />
+            <Label fx:id="lblCarbs" layoutX="82.0" layoutY="147.0" prefHeight="17.0" prefWidth="104.0" />
+            <Label fx:id="lblProteins" layoutX="82.0" layoutY="186.0" prefHeight="17.0" prefWidth="104.0" />
+            <Label fx:id="lblCalories" layoutX="109.0" layoutY="40.0" prefHeight="17.0" prefWidth="102.0" />
+            <ListView fx:id="listTrackedFood" layoutX="14.0" layoutY="203.0" prefHeight="200.0" prefWidth="290.0" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
